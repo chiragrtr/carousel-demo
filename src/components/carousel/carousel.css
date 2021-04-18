@@ -1,0 +1,67 @@
+.carousel-container {
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+.carousel-container .carousel {
+    padding: 40px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+.carousel-container .carousel-images {
+    display: flex;
+    margin: auto;
+    transition: all 1s ease-out;
+}
+.carousel-container .carousel-image {
+    padding: 40px;
+    opacity: 0.1;
+    width: 27%;
+}
+.carousel-container .carousel-image.current {
+    opacity: 1;
+    transform: scale(1.5);
+}
+.carousel-container .left-arrow, .right-arrow {
+    cursor: pointer;
+    z-index: 1;
+    position: fixed;
+    align-self: center;
+    border: solid red;
+    border-width: 0 8px 8px 0;
+    padding: 14px;
+}
+.carousel-container .left-arrow {
+    left: 25%;
+    transform: rotate(135deg);
+}
+.carousel-container .right-arrow {
+    right: 25%;
+    transform: rotate(-45deg);
+}
+.carousel-container .inactive {
+    opacity: 0.3;
+    cursor: initial;
+}
+.carousel-container .image-container {
+    display: contents;
+}
+.carousel-container .details {
+    text-transform: capitalize;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+    .carousel-container {
+        width: initial;
+    }
+    .carousel-container .carousel-image {
+        padding: 20px;
+    }
+    .carousel-container .right-arrow {
+        right: 12%;
+    }
+}
